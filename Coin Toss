@@ -1,0 +1,31 @@
+"""
+Game PLay: To simulate the flipping coin
+Select a side of coin 
+Give user ability to guess 
+If the user guesse the correct side they win
+Print how many times you played and won
+Hint: use Random Choice
+"""
+
+import random
+
+total = 0
+won = 0
+while True:
+    total += 1
+    coin = ["Head", "Tail"]
+    r_choice = random.choice(coin)
+    print (r_choice)
+    u_choice = input("Coin has been flipped do you want Head or Tail: ")
+    if r_choice == u_choice:
+        print ("Hey you Won! it was indeed ", r_choice)
+        won += 1
+    else:
+        print ("hard Luck! it was", r_choice)
+
+    option = input("do you want to play more enter Y or N: ")
+    if option == 'Y':
+        pass
+    else:
+        print(f"Okay, you won {won} games out of {total} games")
+        break
