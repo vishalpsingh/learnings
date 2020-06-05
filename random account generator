@@ -1,0 +1,22 @@
+import string
+from random import choice
+from random import randint
+#########################
+# list first name
+# list last name
+# randomly generate full name
+# generate a random phone number
+# generate a rnadom email address (first name.last name@service provide)
+# for 100 people
+#########################
+first_name = ['Jon', 'Ben', 'Rick', 'Bill', 'Vishal']
+last_name = ['Johnson', 'Andrews', 'Smith', 'Jones', 'Williams']
+email_provider = ['gmail', 'hotmail', 'yahoo', 'outlook', 'icloud']
+
+for i in range(10):
+    first, last, email = choice(first_name), choice(last_name), choice(email_provider) 
+    random_name =  f'{first} {last}'
+    random_email = f'{first.lower()}.{last.lower()}@{email}.com'
+    random_phone = f'{randint(0,9)}{randint(0,9)}{randint(0,9)}-{randint(0,9)}{randint(0,9)}{randint(0,9)}{randint(0,9)}-{randint(0,9)}'\
+                   f'{randint(0,9)}{randint(0,9)}'
+    print(f'name: {random_name}; email: {random_email}; phone: {random_phone}')
