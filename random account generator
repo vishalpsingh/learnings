@@ -19,4 +19,10 @@ for i in range(10):
     random_email = f'{first.lower()}.{last.lower()}@{email}.com'
     random_phone = f'{randint(0,9)}{randint(0,9)}{randint(0,9)}-{randint(0,9)}{randint(0,9)}{randint(0,9)}{randint(0,9)}-{randint(0,9)}'\
                    f'{randint(0,9)}{randint(0,9)}'
-    print(f'name: {random_name}; email: {random_email}; phone: {random_phone}')
+    print(f'''
+            -------------------
+            name: {random_name} 
+            email: {random_email}
+            phone: {random_phone}
+            -------------------
+         ''')
